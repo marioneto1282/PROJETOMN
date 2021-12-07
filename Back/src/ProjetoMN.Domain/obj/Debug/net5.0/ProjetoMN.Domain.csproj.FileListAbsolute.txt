@@ -1,0 +1,12 @@
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ProjetoMN.Domain.csproj.AssemblyReference.cache
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ProjetoMN.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ProjetoMN.Domain.AssemblyInfoInputs.cache
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ProjetoMN.Domain.AssemblyInfo.cs
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ProjetoMN.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\bin\Debug\net5.0\ProjetoMN.Domain.deps.json
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\bin\Debug\net5.0\ProjetoMN.Domain.dll
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\bin\Debug\net5.0\ref\ProjetoMN.Domain.dll
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\bin\Debug\net5.0\ProjetoMN.Domain.pdb
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ProjetoMN.Domain.dll
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ref\ProjetoMN.Domain.dll
+C:\Users\ThinkPad\Desktop\PROJETOMN\Back\src\ProjetoMN.Domain\obj\Debug\net5.0\ProjetoMN.Domain.pdb

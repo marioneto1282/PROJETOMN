@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "uJQYLV692Lf1CJQdcsHzpxhmBzL+51hbw50ngEAjXS+aCnHyKKkUBmROWbfQuj35DEbcvHwy1Fu/3vHax5+Oqw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ThinkPad\\Desktop\\PROJETOMN\\Back\\src\\ProjetoMN.Domain\\ProjetoMN.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.net.http.json\\6.0.0\\system.net.http.json.6.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
