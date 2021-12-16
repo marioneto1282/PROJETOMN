@@ -1,5 +1,11 @@
-import { HttpClient } from '@angular/common/http';
+
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Pessoas } from '../Model/Pessoas';
+import { PessoasService } from '../Service/pessoasService';
+
+
+
 
 
 
@@ -12,25 +18,59 @@ import { Component, OnInit } from '@angular/core';
 export class PessoasComponent implements OnInit {
 
 
-  public pessoas : any;
+  public pessoas: Pessoas[] = [];
+  public pessoasFiltradas: Pessoas[] = [];
+  private filtroListado = '';
 
 
 
-  constructor(private http: HttpClient) { }
-
-  ngOnInit() {
-    this.GetPessoas();
+  public get filtroLista(): string{
+    return this.filtroListado;
   }
 
-  public GetPessoas(): void{
-    this.http.get('https://localhost:5001/api/Pessoas').subscribe(
-      response => {this.pessoas = response;
-      this.pessoas = this.pessoas.data},
-      error => console.log(error)
-      );
+  public set filtroLista(value: string){
+    this.filtroListado = value;
+    this.pessoasFiltradas = this.filtroLista ? this.filtrarPessoas(this.filtroLista) : this.pessoas;
+  }
+
+  public filtrarPessoas(filtrarPor: string): Pessoas[]{
+    filtrarPor = filtrarPor.toLocaleLowerCase();
+    return this.pessoas.filter(
+      (pessoa: any) => pessoa.name.toLocaleLowerCase().indexOf(filtrarPor) !== -1 ||
+      pessoa.email.toLocaleLowerCase().indexOf(filtrarPor) !== -1
+    )
+  }
+
+
+  constructor(private pessoasService: PessoasService,
+    private router: Router)
+    {
+
     }
-  }
 
+
+
+    ngOnInit(): void {
+      this.getPessoas()
+    }
+
+
+
+    public getPessoas(): void{
+      this.pessoasService.getPessoas().subscribe(
+        {
+        next: (pessoas: Pessoas[])  => {
+          this.pessoas = pessoas;
+          this.pessoasFiltradas = this.pessoas;
+        },
+        error: (error: any) => console.log(error),
+      })
+
+        console.log(this.pessoas);
+    }
+
+
+  }
 
 
 

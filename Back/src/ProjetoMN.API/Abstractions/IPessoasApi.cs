@@ -7,10 +7,20 @@ using Refit;
 
 namespace ProjetoMN.API.Abstractions
 {
+
+
     public interface IPessoasApi
     {
       [Get("/public/v1/users")]  
 
       Task<Response> GetPessoas();
     }
+
+    public interface IPessoasByNameApi
+    {
+       [Get("/public/v1/users?name={name}")]  
+        Task<Response> GetAllPessoasByName(string name, bool includePessoas = false);
+    }
+      
+      
 }
