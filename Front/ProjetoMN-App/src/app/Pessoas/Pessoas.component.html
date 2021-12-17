@@ -1,16 +1,36 @@
-
 <form class="contactform">
-  <input class="form-group row" (click)="getPessoas()" type="button" value="Chamar API">
+  <div  class="d-flex justify-content-start">
+    <div class="input-group mb-2">
+      <a class="btn btn-outline-primary ms-1" routerLink="/name" href="#">
+        <b>Buscar</b>
+      </a>
+      <input
+      type="text"
+      class="form-row ms-2"
+      placeholder="Buscar Nome"
+      [(ngModel)]="filtroLista">
+    </div>
+  </div>
+  <button class="form-group row ms-1" (click)="getPessoas()" type="button">{{mostrarApi ? 'ChamarApi' : 'OcultarApi'}}</button>
   <br>
-  <div *ngFor="let pessoa of pessoas" class="form-group row col-sm-6">
-    <br>
-    <label><b>Nome</b></label>
+  <br>
+  <div [collapse]="mostrarApi" *ngFor="let pessoa of pessoas"  class="  card-shadow  mb-4 bg-white rounded">
+    <label><b>Nome:</b></label>
     <input  type="text" value="{{pessoa.name}}">
-    <label><b>Email</b></label>
+    <label>  <b>Email:</b></label>
     <input type="email" value="{{pessoa.email}}">
-    <label><b>Gênero</b></label>
+    <label><b>Gênero:</b></label>
     <input type="text" value="{{pessoa.gender}}">
-    <label><b>Status</b></label>
+    <label><b>Status:</b></label>
     <input type="text" value="{{pessoa.status}}">
   </div>
 </form>
+
+
+
+
+
+
+
+
+

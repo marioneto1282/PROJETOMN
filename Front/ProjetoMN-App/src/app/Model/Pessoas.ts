@@ -1,6 +1,6 @@
-import { Data } from "@angular/router";
-
-
+export interface Data{
+   data: Pessoas[];
+}
 
 
 export interface Pessoas {

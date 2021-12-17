@@ -1,7 +1,7 @@
-
-import { Component, OnInit } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+import { Component, OnInit,  TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
-import { Pessoas } from '../Model/Pessoas';
+import { Data, Pessoas } from '../Model/Pessoas';
 import { PessoasService } from '../Service/pessoasService';
 
 
@@ -17,10 +17,12 @@ import { PessoasService } from '../Service/pessoasService';
 })
 export class PessoasComponent implements OnInit {
 
-
+  modalRef?: BsModalRef;
   public pessoas: Pessoas[] = [];
   public pessoasFiltradas: Pessoas[] = [];
+  public data: Data[] = [];
   private filtroListado = '';
+  mostrarApi: boolean = true;
 
 
 
@@ -38,39 +40,35 @@ export class PessoasComponent implements OnInit {
     return this.pessoas.filter(
       (pessoa: any) => pessoa.name.toLocaleLowerCase().indexOf(filtrarPor) !== -1 ||
       pessoa.email.toLocaleLowerCase().indexOf(filtrarPor) !== -1
-    )
-  }
-
-
-  constructor(private pessoasService: PessoasService,
-    private router: Router)
-    {
-
+      )
     }
 
 
+    constructor(private pessoasService: PessoasService,
+                private router: Router){}
 
-    ngOnInit(): void {
-      this.getPessoas()
-    }
+
+
+
+
+    ngOnInit(): void { }
 
 
 
     public getPessoas(): void{
-      this.pessoasService.getPessoas().subscribe(
-        {
-        next: (pessoas: Pessoas[])  => {
-          this.pessoas = pessoas;
+      this.pessoasService.obterPessoas().subscribe(
+        response =>{this.pessoas = response.data;
           this.pessoasFiltradas = this.pessoas;
+          this.mostrarApi = !this.mostrarApi;
         },
-        error: (error: any) => console.log(error),
-      })
-
-        console.log(this.pessoas);
+        error => console.log(error));
+      }
     }
 
 
-  }
+
+
+
 
 
 
